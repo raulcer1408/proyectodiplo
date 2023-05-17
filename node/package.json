@@ -1,0 +1,16 @@
+{
+  "name": "api-users",
+  "version": "0.0.1",
+  "description": "proyecto desarrollado con node",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raul manuel cervantes",
+  "license": "ISC",
+  "mail": "raulcer.rmc@gmail.com",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.0"
+  }
+}
