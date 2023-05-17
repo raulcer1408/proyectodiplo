@@ -23,10 +23,9 @@ class Model {
     const { rows } = await pool.query("select* from persona where cedula_identidad = $1 ;", [ci]);
     return rows[0];
   }
-
   async addUsuario(cedula_identidad,nombre,primer_apellido,segundo_apellido,fecha_nacimiento) {
     //await pool.query("INSERT INTO persona () values ($1)", [name]);
-    await pool.query("insert into persona(cedula_identidad, nombre,primer_apellido,segundo_apellido,fecha_nacimiento)values($1,$2,$3,$4,$5)",[cedula_identidad,primer_apellido,segundo_apellido,fecha_nacimiento]);
+    await pool.query("insert into persona(cedula_identidad, nombre,primer_apellido,segundo_apellido,fecha_nacimiento)values($1,$2,$3,$4,$5)",[cedula_identidad,nombre,primer_apellido,segundo_apellido,fecha_nacimiento]);
   }
 
   async updateUsuario(cedula_identidad,nombre,primer_apellido,segundo_apellido,fecha_nacimiento) {
